@@ -1,3 +1,5 @@
+# ansible-playbook -i hosts snuffles.yml --limit staging --ask-become-pass
+
 ---
 - hosts: all
   sudo: true
