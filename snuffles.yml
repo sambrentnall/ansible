@@ -11,4 +11,4 @@
   #     - some_directory2
 
   roles:
-    - snuffles
+    - base
