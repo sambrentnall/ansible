@@ -1,0 +1,12 @@
+---
+- hosts: all
+  sudo: true
+  # tasks:
+  #   - name: Create /etc/some_directory
+  #     file: path=/home/{{ item }}  state=directory
+  #     with_items:
+  #     - some_directory1
+  #     - some_directory2
+
+  roles:
+    - snuffles

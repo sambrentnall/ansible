@@ -1,0 +1,7 @@
+---
+- name: create user sambrentnall and add to sudo
+  user:
+    name: sambrentnall
+    createhome: yes
+    state: present
+    groups: "sudo"
