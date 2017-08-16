@@ -1,7 +1,7 @@
 - name: install packages
   apt: pkg={{ item }} state=latest
   with_items:
-    - aptitude
+    - aptitudeexit
     - bash-completion
     - git
     - openssh-client

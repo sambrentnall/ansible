@@ -7,8 +7,8 @@ Vagrant.configure("2") do |config|
   # https://docs.vagrantup.com.
 
 
-  config.vm.box = "debian/stvaretch64"
- # config.vm.box = "ubuntu/xenial64"
+ # config.vm.box = "debian/stvaretch64"
+  config.vm.box = "ubuntu/xenial64"
 
   config.vm.provider :virtualbox do |v|
      v.name = "snuffles.dev"
