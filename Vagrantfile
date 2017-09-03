@@ -10,6 +10,9 @@ Vagrant.configure("2") do |config|
  # config.vm.box = "debian/stvaretch64"
   config.vm.box = "ubuntu/xenial64"
 
+# Set the default hostname for this ubuntu box
+  config.vm.hostname = "snufflesDev"
+
   config.vm.provider :virtualbox do |v|
      v.name = "snuffles.dev"
      v.memory = 2048
@@ -17,9 +20,10 @@ Vagrant.configure("2") do |config|
    end 
 
   config.vm.provision :ansible do |ansible|
-      #  ansible.verbose = "vvv"
+        # ansible.verbose = "vvv"
         ansible.playbook = "snuffles.yml"
           ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
+          ansible.raw_arguments  = "--ask-vault-pass"
     end
 
 end

@@ -5,3 +5,5 @@ Ansible and docker to create home server for learning
 - jenkins
 - git
 - Linux Server Distros
+- CI/CD pipeline
+- vagrant

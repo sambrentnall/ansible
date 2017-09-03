@@ -1,0 +1,16 @@
+---
+- name: create user sambrentnall and add to sudo
+  user:
+    name: "{{ user.name }}"
+    password: "{{ vault_user_password | password_hash('sha512') }}"
+    createhome: yes
+    state: present
+    groups: "sudo"
+  become: true
+
+- name: Set authorized key took from file
+  authorized_key:
+    user: "{{ user.name }}"
+    state: present
+    key: "{{ user.macbookairkey }}"
+  become: true

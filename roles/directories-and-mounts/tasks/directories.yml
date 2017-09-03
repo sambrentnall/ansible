@@ -1,0 +1,9 @@
+- name: create /mnt directories
+  file:
+    dest: "/mnt/{{ item }}"
+    state: directory
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+    mode: 0771
+  with_items: "{{ directories }}"
+  become: true

@@ -1,0 +1,8 @@
+---
+- name: create directories
+  include: directories.yml
+  tags: dir
+
+- name: create mounts
+  include: mount-points.yml
+  tags: mnt

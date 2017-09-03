@@ -1,0 +1,32 @@
+---
+# Test variable are working correctly
+# my_test_variable: foobar
+
+# The user who will be in charge of everything
+user:
+  name: sambrentnall
+  group: sambrentnall
+  uid: 1000
+  gid: 1000
+  macbookairkey: "{{ lookup('file', '/Users/sambrentnall/.ssh/id_rsa.pub') }}"
+
+# Timezone for everything
+timezone: Europe/Paris
+
+directories:
+  - app-data
+  - downloads
+  - downloads/intermediate
+  - downloads/intermediate/incomeplete
+  - downloads/intermediate/watch
+  - tv
+  - movies
+
+# NFS share settings, matches the mount command
+tv_nfs_mount:
+  src: 10.30.50.201:/mnt/
+  name: /mnt/app-data
+  mode: "0771"
+  user: "{{ user.name }}"
+  group: "{{ user.group }}"
+  unit_file: "{{ app_folder }}-{{ mount }}"
