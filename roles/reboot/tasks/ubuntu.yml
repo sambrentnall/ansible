@@ -19,17 +19,3 @@
       delay=5
       timeout=30
   when: reboot_required.stat.exists
-
-# - name: reboot server if /var/run/reboot-required exists
-#   command: shutdown -r now
-#   args:
-#     removes: /var/run/reboot-required
-#   become: true
-
-# - name: Wait for server to come back
-#   local_action:
-#     module: wait_for
-#       host="{{ inventory_hostname }}"
-#       state=started
-#       delay=5
-#       timeout=30

@@ -23,20 +23,9 @@
     - packages
   become: true
 
-# - name: Upgrade all packages
-#   apt:
-#     upgrade: dist
-#     update_cache: yes
-#     cache_valid_time: 3600
-#   become: true
-
-# - name: reboot if SELinux changed
-#   shell: shutdown -r now "Ansible updates triggered"
-#   async: 0
-#   poll: 0
-#   ignore_errors: true
-
-# - name: waiting for server to reboot
-#   wait_for: host="{{ ansible_ssh_host | default(inventory_hostname) }}" port={{ ansible_ssh_port | default(22) }} search_regex=OpenSSH delay=30 timeout=120
-#   connection: local
-#   sudo: false
+- name: Upgrade distribtuion
+  apt:
+    upgrade: dist
+    update_cache: yes
+    cache_valid_time: 3600
+  become: true
