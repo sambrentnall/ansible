@@ -1,0 +1,11 @@
+---
+- name: configure ubuntu
+  include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+
+# - name: configure CentOS
+#   include: centos.yml
+#   when: ansible_distribution == "CentOS"
+
+- name: configure users
+  include: user.yml

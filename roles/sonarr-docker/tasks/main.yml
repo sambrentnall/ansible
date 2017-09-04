@@ -1,0 +1,6 @@
+---
+- name: pull an image
+  docker_image:
+    name: linuxserver/sonarr
+    tag: latest
+  become: true

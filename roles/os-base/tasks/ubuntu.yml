@@ -1,3 +1,4 @@
+---
 - name: install packages
   apt: pkg={{ item }} state=latest
   with_items:
@@ -11,9 +12,11 @@
   with_items:
     - aptitude
     - bash-completion
+    - curl
     - git
     - openssh-client
     - openssh-server
+    - open-vm-tools
     - wget
     - vim
   tags:

@@ -14,5 +14,8 @@
   #     debug: msg={{ my_test_variable }}
 
   roles:
-    - ubuntu-base
-    - directories-and-mounts
+    - os-base
+  #  - directories-and-mounts
+    - docker
+    - sonarr-docker
+    - reboot

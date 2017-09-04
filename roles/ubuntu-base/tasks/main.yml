@@ -1,8 +1,0 @@
----
-- name: configure base-os
-  include: apt.yml
-  tags: apt
-
-- name: configure users
-  include: user.yml
-  tags: users

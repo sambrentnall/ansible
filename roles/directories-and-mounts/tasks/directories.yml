@@ -1,3 +1,4 @@
+---
 - name: create /mnt directories
   file:
     dest: "/mnt/{{ item }}"
