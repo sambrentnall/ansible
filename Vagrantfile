@@ -11,17 +11,20 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
 
 # Set the default hostname for this ubuntu box
-  config.vm.hostname = "snufflesDev"
+  config.vm.hostname = "gitlab"
+
+# Configigure Port Forwarding for GitLab  
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
 
   config.vm.provider :virtualbox do |v|
-     v.name = "snuffles.dev"
+     v.name = "gitlab.dev"
      v.memory = 2048
      v.cpus = 2
    end 
 
   config.vm.provision :ansible do |ansible|
         # ansible.verbose = "vvv"
-        ansible.playbook = "snuffles.yml"
+        ansible.playbook = "gitlab.yml"
           ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
           ansible.raw_arguments  = "--ask-vault-pass"
     end

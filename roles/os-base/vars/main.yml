@@ -1,0 +1,11 @@
+---
+# Test variable are working correctly
+# my_test_variable: foobar
+
+# The user who will be in charge of everything
+user:
+  name: sambrentnall
+  group: sambrentnall
+  uid: 1000
+  gid: 1000
+  macbookairkey: "{{ lookup('file', '/Users/sambrentnall/.ssh/id_rsa.pub') }}"

@@ -1,0 +1,7 @@
+# Stable version
+gitlab_repo: gitlab-ce
+gitlab_version: latest
+
+# Unstable version
+# gitlab_repo: unstable
+# gitlab_version: 8.17.0-rc1.ce.0

@@ -1,0 +1,18 @@
+---
+directories:
+  - app-data
+  - downloads
+  - downloads/intermediate
+  - downloads/intermediate/incomeplete
+  - downloads/intermediate/watch
+  - tv
+  - movies
+
+# NFS share settings, matches the mount command
+tv_nfs_mount:
+  src: 10.30.50.201:/mnt/
+  name: /mnt/app-data
+  mode: "0771"
+  user: "{{ user.name }}"
+  group: "{{ user.group }}"
+  unit_file: "{{ app_folder }}-{{ mount }}"

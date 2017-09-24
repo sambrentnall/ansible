@@ -1,0 +1,7 @@
+---
+dockeruser: dockeruser
+dockergroup: dockergroup
+
+appdata: /opt/appdata
+downloaddir: /opt/downloads
+dockerlist: /opt/docker.list

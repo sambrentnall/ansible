@@ -1,0 +1,6 @@
+---
+- name: pre configure docker compose
+  include: install.yml
+
+- name: run docker-compose
+  include: docker-apps.yml

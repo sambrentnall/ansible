@@ -15,7 +15,6 @@
 
   roles:
     - os-base
+    - gitlab
   #  - directories-and-mounts
-    - docker
-    - docker-compose
   #  - reboot
